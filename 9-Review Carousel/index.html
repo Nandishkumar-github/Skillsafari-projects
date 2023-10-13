@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review carousel " />
+    <title>Review carousel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Testimonials</h1>
+      <div class="container">
+        <div class="indicator">
+            <span class="btn active"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+        </div>
+        <div class="testimonial">
+          <div class="slide-row" id="slide">
+            <div class="slide-col">
+              <div class="user-text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi quos atque unde asperiores eius quibusdam at eaque
+                  aliquid facilis? Assumenda!
+                </p>
+                <h3>Sarah</h3>
+                <p>Zara inc.</p>
+              </div>
+              <div class="user-img">
+                <img src="./img1.jpeg" alt="img1" />
+              </div>
+            </div>
+
+            <div class="slide-col">
+              <div class="user-text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi quos atque unde asperiores eius quibusdam at eaque
+                  aliquid facilis? Assumenda!
+                </p>
+                <h3>Natalie</h3>
+                <p>Town inc.</p>
+              </div>
+              <div class="user-img">
+                <img src="./img2.jpeg" alt="img1" />
+              </div>
+            </div>
+
+            <div class="slide-col">
+              <div class="user-text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi quos atque unde asperiores eius quibusdam at eaque
+                  aliquid facilis? Assumenda!
+                </p>
+                <h3>Will smith</h3>
+                <p>Hallmark inc.</p>
+              </div>
+              <div class="user-img">
+                <img src="./img3.jpeg" alt="img1" />
+              </div>
+            </div>
+
+            <div class="slide-col">
+              <div class="user-text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi quos atque unde asperiores eius quibusdam at eaque
+                  aliquid facilis? Assumenda!
+                </p>
+                <h3>Maxwell</h3>
+                <p>Bridgestone inc.</p>
+              </div>
+              <div class="user-img">
+                <img src="./img4.jpeg" alt="img1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let btn = document.getElementsByClassName("btn");
+        let slide = document .getElementById("slide");
+
+        btn[0].onclick = function() {
+            slide.style.transform = "translateX(0px)";
+            for(i=0; i<4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function() {
+            slide.style.transform = "translateX(-800px)";
+            for(i=0; i<4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function() {
+            slide.style.transform = "translateX(-1600px)";
+            for(i=0; i<4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[3].onclick = function() {
+            slide.style.transform = "translateX(-2400px)";
+            for(i=0; i<4; i++) {
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+    </script>
+  </body>
+</html>
