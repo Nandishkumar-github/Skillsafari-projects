@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Navbar on scroll">
+    <title>Navbar on scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <img src="./logo.png" alt="logo" class="logo">
+            <ul id="menu">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Product</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
+    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo doloremque quisquam praesentium dicta, quidem id culpa dolor deserunt assumenda harum distinctio earum totam dolores voluptas corporis provident sunt officia, optio, numquam perspiciatis necessitatibus? Nemo nulla, recusandae hic dicta voluptatum ipsa magni omnis mollitia necessitatibus itaque provident est reiciendis. Nemo, repudiandae.</p>
+
+    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo doloremque quisquam praesentium dicta, quidem id culpa dolor deserunt assumenda harum distinctio earum totam dolores voluptas corporis provident sunt officia, optio, numquam perspiciatis necessitatibus? Nemo nulla, recusandae hic dicta voluptatum ipsa magni omnis mollitia necessitatibus itaque provident est reiciendis. Nemo, repudiandae.</p>
+
+    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo doloremque quisquam praesentium dicta, quidem id culpa dolor deserunt assumenda harum distinctio earum totam dolores voluptas corporis provident sunt officia, optio, numquam perspiciatis necessitatibus? Nemo nulla, recusandae hic dicta voluptatum ipsa magni omnis mollitia necessitatibus itaque provident est reiciendis. Nemo, repudiandae.</p>
+
+    <script>
+        let navbar = document.getElementById("navbar");
+        let menu = document.getElementById("menu");
+
+        window.onscroll = function() {
+            if(window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+    </script>
+</body>
+</html>
