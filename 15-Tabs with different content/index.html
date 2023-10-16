@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabs">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tab-box">
+            <button class="tab-btn active">Home</button>
+            <button class="tab-btn">About</button>
+            <button class="tab-btn">Blogs</button>
+            <button class="tab-btn">Contact us</button>
+            <div class="line"></div>
+        </div>
+        <div class="content-box">
+            <div class="content active ">
+                <h2>Home</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem perferendis molestiae earum sunt doloribus velit non doloremque, et voluptates pariatur eaque nemo in, iste quaerat?</p>
+            </div>
+            <div class="content">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem perferendis molestiae earum sunt doloribus velit non doloremque, et voluptates pariatur eaque nemo in, iste quaerat?</p>
+            </div>
+            <div class="content">
+                <h2>Blogs</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem perferendis molestiae earum sunt doloribus velit non doloremque, et voluptates pariatur eaque nemo in, iste quaerat?</p>
+            </div>
+            <div class="content">
+                <h2>Contact us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem perferendis molestiae earum sunt doloribus velit non doloremque, et voluptates pariatur eaque nemo in, iste quaerat?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const allContent = document.querySelectorAll(".content");
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", (e) => {
+                tabs.forEach(tab=>{tab.classList.remove('.active')});
+                tab.classList.add('.active');
+
+                let line = document.querySelector(".line");
+            line.style.width = e.target.offsetWidth + "px";
+            line.style.left = e.target.offsetLeft + "px";
+
+            allContent.forEach(content=>{content.classList.remove("active")});
+            allContent[index].classList.add("active");
+            })
+        })
+    </script>
+</body>
+</html>
